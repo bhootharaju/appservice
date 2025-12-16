@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: bhootharajuappservice
+spec:
+    type: LoadBalancer
+    ports:
+    - port: 20000 
+    selector:
+        app: bhootharajuappservice
