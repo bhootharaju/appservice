@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: bhootharajuappservice 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bhootharajuappservice
+  template:
+    metadata:
+      labels:
+        app: bhootharajuappservice 
+    spec:
+      containers:
+        - name: bhootharajuappservice 
+          image: mastercloudcr.azurecr.io/bhootharajuappservice
+          ports:
+          - containerPort: 20000
